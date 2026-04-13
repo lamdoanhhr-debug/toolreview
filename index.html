@@ -522,7 +522,7 @@ function calcL39(dtp, b24) {
   return { lv: 'Chưa đạt', det: 'DTP quy đổi: ' + fmtVND(Math.round(d)) + ' (cần ≥ 40tr)' };
 }
 function calcMGCC(phi, dtp, nav, b24) {
-  if (phi < 22) return { lv: 'Không đủ ĐK', det: 'Phí ' + phi + '% < 22%' };
+  if (phi < 0.22) return { lv: 'Không đủ ĐK', det: 'Phí ' + phi + '% < 0.22%' };
   var d = dtp / b24;
   var ld = 0, ln = 0;
   if (d >= 240000000) ld = 4; else if (d >= 160000000) ld = 3; else if (d >= 90000000) ld = 2; else if (d >= 50000000) ld = 1;
